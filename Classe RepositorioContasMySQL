@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class RepositorioContasMySQL implements RepositorioContas {
+    private List<Conta> contas;
+
+    public RepositorioContasMySQL() {
+        // Inicializa a lista de contas (simulando o acesso ao banco de dados)
+        contas = new ArrayList<>();
+        contas.add(new Conta(1, 1000.0));
+        contas.add(new Conta(2, 1500.0));
+        // Adicione mais contas conforme necessário
+    }
+
+    @Override
+    public List<Conta> RetornaTodasAsContas() throws RepositorioException {
+        // Simplesmente retorna todas as contas armazenadas na lista
+        return contas;
+    }
+}
