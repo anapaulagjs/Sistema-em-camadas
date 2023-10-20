@@ -1,0 +1,5 @@
+import java.util.List;
+
+public interface RepositorioContas {
+    public List<Conta> RetornaTodasAsContas() throws RepositorioException;
+}
